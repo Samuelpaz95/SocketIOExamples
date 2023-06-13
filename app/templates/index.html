@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+</head>
+
+<body>
+  <section id="title">
+    <h1>Sockets test</h1>
+  </section>
+  <section id="chat">
+    <div id="messages"></div>
+    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+    <button id="sendButton"> Send </button>
+  </section>
+  <br>
+  <section>
+    <button id="group1">Grupo 1</button>
+    <button id="group2">Grupo 2</button>
+  </section>
+  <script src="https://cdn.socket.io/3.1.3/socket.io.min.js"
+    integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh"
+    crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+
+</html>
