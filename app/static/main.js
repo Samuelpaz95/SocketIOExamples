@@ -6,7 +6,11 @@ let messageBox = document.getElementById("message");
 let sendButton = document.getElementById("sendButton");
 let currentRoom = null;
 
-let socket = io("http://localhost:5000");
+let socket = io("http://localhost:5000", {
+    extraHeaders: {
+        'Authorization': 'Bearer ' + 'Your JWT Token'
+    }
+});
 let username = window.prompt("USERNAME: ");;
 
 
